@@ -4,6 +4,12 @@ Update the security Port
 Set hostname of Master Node
 ```bash
 sudo hostnamectl set-hostname control-plane
+sudo reboot
+```
+### Add Route for Networking 
+```bash
+sudo vi /etc/hosts
+<private ip> control-plane
 ```
 ### Update the package index
 ```bash
@@ -116,6 +122,10 @@ The steps for the Worker Node are largely similar to the Master Node for system 
 
 ### 1. System Preparation
 Run the updates, load modules, and configure sysctl exactly as shown in the Master Node section.
+update /etc/hosts
+<private ip of master node> control-plane
+<private ip of worker node> worker01
+on both instance
 
 ### 2. Disable swap
 ```bash
