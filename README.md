@@ -1,6 +1,6 @@
 # kubernete_cluster_setup_on_EC2
 Launch an EC2 Instance with t2.medium
-update the 
+update the Security Port
 # Master Node
 ### Change the Hostname of Master Node
 'sudo hostnamectl set-hostname control-plane
@@ -56,7 +56,7 @@ echo \
 # Install containerd
 sudo apt-get update
 sudo apt-get install -y containerd.io
-Note: This is only one way of installing containerd. Please refer to the containerd docs.
+## This is only one way of installing containerd. Please refer to the containerd docs.
 
 Configure the systemd cgroup driver
 This is required to mitigate the instability of having two cgroup managers.
